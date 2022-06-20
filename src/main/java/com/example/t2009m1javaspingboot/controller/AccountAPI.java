@@ -42,7 +42,6 @@ public class AccountAPI {
             ResponseEntity.badRequest().build();
         }
         Account existAccount = optionalAccount.get();
-        // map object
         existAccount.setFirstName(account.getFirstName());
         existAccount.setLastName(account.getLastName());
         return ResponseEntity.ok(accountService.save(existAccount));
