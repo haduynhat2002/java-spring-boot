@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequestMapping("api/v1/accounts")
 public class AccountAPI {
 
-    @Autowired
+    @Autowired// annotation
     AccountService accountService;
 
     @RequestMapping(method = RequestMethod.GET)

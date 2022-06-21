@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping(path = "api/v1/products")
 public class ProductApi {
-    @Autowired
+    @Autowired// annotation
     ProductService productService;
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Product>> findAll(){
